@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单事件</title>
+    <script type="text/javascript" src="../js/jquery-3.5.1.min.js"></script>
+</head>
+<style>
+    span{
+        display: none;
+    }
+</style>
+<body>
+    <form action="">
+        username:<input type="text" value="lisi"><br/>
+        password:<input type="password" value="1212"><br/>
+        <input type="submit" value="提交">
+    </form>
+
+    文本：<input type="text"><br/>
+
+    <input type="text" id="inputTest">
+    <span>请输入你的电话号码?</span>
+    <p>点击输入框获取焦点。</p>
+
+    失去焦点：<input type="text" id="blurTest">
+
+    <script>
+        $(function (){
+            $("form").submit(function (){
+                alert("提交");
+            })
+        })
+
+        $(function (){
+            $("input").change(function (){
+                alert("文本被修改！");
+            })
+        })
+
+        $(function (){
+            $("#inputTest").focus(function (){
+                $("span").css("display","inline").fadeOut(2000);
+            })
+        })
+
+        $(function (){
+            $("#blurTest").blur(function (){
+                alert("失去焦点！");
+            })
+        })
+    </script>
+</body>
+</html>

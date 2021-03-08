@@ -2,9 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>选择器</title>
+    <script type="text/javascript" src="../js/jquery-3.5.1.min.js"></script>
 </head>
 <body>
+    <h1 id="h1Ttest1">张三</h1>
+    <h2 class="h1Ttest2">李四</h2>
+    <h3>王五</h3>
 
+    <script>
+        $(document).ready(function(){
+            /*$("#h1Ttest1").hide();
+            $(".h1Ttest2").hide();
+            $("h3").hide();*/
+
+            // *:隐藏所有元素
+            $("*").hide(1000);
+        })
+    </script>
 </body>
 </html>

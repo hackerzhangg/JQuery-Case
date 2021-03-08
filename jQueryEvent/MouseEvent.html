@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>鼠标事件</title>
+    <script type="text/javascript" src="../js/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <p>你可以点击我一下！</p>
+
+    <script>
+        $(document).ready(function (){
+            /*$("p").click(function (){
+                alert("你点击了我一下啊！");
+            })*/
+
+            /*$("p").dblclick(function (){
+                alert("你双击了我一下啊！");
+            })*/
+
+            /*$("p").mouseenter(function (){
+                $("p").css("background-color","yellow");
+            })*/
+
+            /*$("p").mouseleave(function (){
+                $("p").css("background-color","red");
+            })*/
+
+            $("p").hover(function(){
+                $("p").css("background-color","yellow");
+            },function(){
+                $("p").css("background-color","pink");
+            });
+
+        })
+    </script>
+</body>
+</html>
